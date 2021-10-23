@@ -1,7 +1,7 @@
 import React from "react";
 import { MotiView } from "@motify/components";
 import { Text, View } from "react-native";
-import { MessageType } from "../../types/message";
+import { MessageType } from "../../types";
 import { UserPhoto } from "../UserPhoto";
 
 import { styles } from "./styles";

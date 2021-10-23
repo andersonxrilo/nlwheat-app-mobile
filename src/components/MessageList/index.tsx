@@ -4,7 +4,7 @@ import { ScrollView, View } from "react-native";
 import { api } from "../../services/api";
 import { Message } from "../Message";
 import { io } from "socket.io-client";
-import { MessageType } from "../../types/message";
+import { MessageType } from "../../types";
 import { styles } from "./styles";
 const messagesQueue: MessageType[] = [];
 const socket = io(String(api.defaults.baseURL));

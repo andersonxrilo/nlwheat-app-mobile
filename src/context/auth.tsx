@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import * as AuthSessions from "expo-auth-session";
-import { UserType } from "../types/user";
+import { UserType } from "../types";
 import { api } from "../services/api";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
