@@ -1,21 +1,30 @@
 import React from "react";
-
+import { MotiView } from "@motify/components";
 import { Text, View } from "react-native";
+import { MessageType } from "../../types/message";
 import { UserPhoto } from "../UserPhoto";
 
 import { styles } from "./styles";
 
-export function Message() {
+type MessageProps = {
+  message: MessageType;
+};
+
+export function Message({ message }: MessageProps) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text_message}>Texto da mensagem</Text>
-      <View>
-        <UserPhoto
-          imageUri="https://github.com/andersonxrilo.png"
-          sizes="SMALL"
-        />
-        <Text style={styles.username_message}>Nome do Usuário</Text>
+    <MotiView
+      style={styles.container}
+      from={{ opacity: 0, translateY: -50 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ type: "timing", duration: 700 }}
+    >
+      <Text style={styles.text_message}>{message.text} </Text>
+      <View style={styles.footer}>
+        <UserPhoto imageUri={message.user.avatar_url} sizes="SMALL" />
+        <Text style={styles.message_user}>
+          @{message.user.name || message.user.login}
+        </Text>
       </View>
-    </View>
+    </MotiView>
   );
 }

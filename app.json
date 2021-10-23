@@ -2,6 +2,7 @@
   "expo": {
     "name": "nlwheat-app-mobile",
     "slug": "nlwheat-app-mobile",
+    "scheme": "nlwheat-app-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

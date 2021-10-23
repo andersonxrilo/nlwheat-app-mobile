@@ -1,8 +1,8 @@
 import { NativeModules, Platform, StyleSheet } from "react-native";
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import { COLORS } from "../../theme";
 
-const { StatusBarManager } = NativeModules;
-const STATUSBAR_HEIGHT = Platform.OS === "ios" ? 20 : StatusBarManager.HEIGHT;
+const STATUSBAR_HEIGHT = getStatusBarHeight();
 
 export const styles = StyleSheet.create({
   container: {
